@@ -31,12 +31,13 @@ namespace Interface_Test
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.편집EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.선택SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.선택SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.선택Form색상변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pMain = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@ namespace Interface_Test
             this.선택SToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,8 +59,15 @@ namespace Interface_Test
             this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.파일FToolStripMenuItem.Text = "파일(F)";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // 편집EToolStripMenuItem
             // 
@@ -67,28 +75,30 @@ namespace Interface_Test
             this.mainForm생성ToolStripMenuItem,
             this.subForm생성ToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
             this.편집EToolStripMenuItem.Text = "편집(E)";
-            // 
-            // 선택SToolStripMenuItem
-            // 
-            this.선택SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.선택Form색상변경ToolStripMenuItem});
-            this.선택SToolStripMenuItem.Name = "선택SToolStripMenuItem";
-            this.선택SToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.선택SToolStripMenuItem.Text = "선택(S)";
             // 
             // mainForm생성ToolStripMenuItem
             // 
             this.mainForm생성ToolStripMenuItem.Name = "mainForm생성ToolStripMenuItem";
             this.mainForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mainForm생성ToolStripMenuItem.Text = "Main Form 생성";
+            this.mainForm생성ToolStripMenuItem.Click += new System.EventHandler(this.mainForm생성ToolStripMenuItem_Click);
             // 
             // subForm생성ToolStripMenuItem
             // 
             this.subForm생성ToolStripMenuItem.Name = "subForm생성ToolStripMenuItem";
             this.subForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.subForm생성ToolStripMenuItem.Text = "Sub Form 생성";
+            this.subForm생성ToolStripMenuItem.Click += new System.EventHandler(this.subForm생성ToolStripMenuItem_Click);
+            // 
+            // 선택SToolStripMenuItem
+            // 
+            this.선택SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.선택Form색상변경ToolStripMenuItem});
+            this.선택SToolStripMenuItem.Name = "선택SToolStripMenuItem";
+            this.선택SToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.선택SToolStripMenuItem.Text = "선택(S)";
             // 
             // 선택Form색상변경ToolStripMenuItem
             // 
@@ -96,18 +106,21 @@ namespace Interface_Test
             this.선택Form색상변경ToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.선택Form색상변경ToolStripMenuItem.Text = "선택 Form 색상 변경";
             // 
-            // exitToolStripMenuItem
+            // pMain
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.pMain.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMain.Location = new System.Drawing.Point(0, 30);
+            this.pMain.Name = "pMain";
+            this.pMain.Size = new System.Drawing.Size(800, 420);
+            this.pMain.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -129,6 +142,7 @@ namespace Interface_Test
         private System.Windows.Forms.ToolStripMenuItem subForm생성ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 선택SToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 선택Form색상변경ToolStripMenuItem;
+        private System.Windows.Forms.Panel pMain;
     }
 }
 

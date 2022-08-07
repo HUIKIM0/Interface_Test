@@ -17,8 +17,23 @@ namespace Interface_Test
             InitializeComponent();
         }
 
+        private void InnerMain_Load(object sender, EventArgs e)
+        {
+            fInit();
+        }
+
         #region Interface인 iCommon 구현
-        public string strFormName { get => this.Text; set => this.Text = value; }
+        public string strFormName 
+        {
+            get
+            {
+                return this.Text;    
+            }
+            set
+            {
+                this.Text = value;
+            }
+        }
 
         public void fColorChange(Color color)
         {
@@ -30,5 +45,7 @@ namespace Interface_Test
             lblInnerMain.Text = $"{this.Text} Call";
         }
         #endregion
+
+
     }
 }

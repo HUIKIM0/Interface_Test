@@ -35,11 +35,12 @@ namespace Interface_Test
             // lblInnerSub
             // 
             this.lblInnerSub.BackColor = System.Drawing.SystemColors.Info;
-            this.lblInnerSub.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblInnerSub.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblInnerSub.Location = new System.Drawing.Point(72, 47);
             this.lblInnerSub.Name = "lblInnerSub";
             this.lblInnerSub.Size = new System.Drawing.Size(245, 95);
             this.lblInnerSub.TabIndex = 0;
+            this.lblInnerSub.Text = "ddd";
             this.lblInnerSub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InnerSub
@@ -49,7 +50,8 @@ namespace Interface_Test
             this.ClientSize = new System.Drawing.Size(382, 196);
             this.Controls.Add(this.lblInnerSub);
             this.Name = "InnerSub";
-            this.Text = "InnerSub";
+            this.Text = "dd";
+            this.Load += new System.EventHandler(this.InnerSub_Load);
             this.ResumeLayout(false);
 
         }

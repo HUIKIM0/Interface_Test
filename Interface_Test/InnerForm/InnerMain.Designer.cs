@@ -34,15 +34,16 @@ namespace Interface_Test
             // 
             // lblInnerMain
             // 
-            this.lblInnerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblInnerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInnerMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblInnerMain.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblInnerMain.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblInnerMain.Location = new System.Drawing.Point(72, 47);
             this.lblInnerMain.Name = "lblInnerMain";
             this.lblInnerMain.Size = new System.Drawing.Size(245, 95);
             this.lblInnerMain.TabIndex = 0;
+            this.lblInnerMain.Text = "dd";
             this.lblInnerMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InnerMain
@@ -53,6 +54,7 @@ namespace Interface_Test
             this.Controls.Add(this.lblInnerMain);
             this.Name = "InnerMain";
             this.Text = "InnerMain";
+            this.Load += new System.EventHandler(this.InnerMain_Load);
             this.ResumeLayout(false);
 
         }

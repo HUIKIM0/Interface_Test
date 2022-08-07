@@ -17,6 +17,11 @@ namespace Interface_Test
             InitializeComponent();
         }
 
+        private void InnerSub_Load(object sender, EventArgs e)
+        {
+            fInit();
+        }
+
         #region Interface인 iCommon 구현
         public string strFormName { get => this.Text; set => this.Text = value; }
 
@@ -30,5 +35,7 @@ namespace Interface_Test
             lblInnerSub.Text = $"{this.Text} Call";
         }
         #endregion
+
+
     }
 }
