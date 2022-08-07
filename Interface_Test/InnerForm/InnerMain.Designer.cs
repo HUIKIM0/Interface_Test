@@ -1,5 +1,5 @@
 ﻿
-namespace Interface_Test.InnerForm
+namespace Interface_Test
 {
     partial class InnerMain
     {
@@ -34,8 +34,8 @@ namespace Interface_Test.InnerForm
             // 
             // lblInnerMain
             // 
-            this.lblInnerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblInnerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInnerMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblInnerMain.ForeColor = System.Drawing.SystemColors.ControlLightLight;

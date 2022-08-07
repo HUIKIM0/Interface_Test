@@ -1,0 +1,12 @@
+D:\dev\C#Work\Interface_Test\Interface_Test\bin\Debug\Interface_Test.exe.config
+D:\dev\C#Work\Interface_Test\Interface_Test\bin\Debug\Interface_Test.exe
+D:\dev\C#Work\Interface_Test\Interface_Test\bin\Debug\Interface_Test.pdb
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.csproj.AssemblyReference.cache
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.Form1.resources
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.InnerMain.resources
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.InnerSub.resources
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.Properties.Resources.resources
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.csproj.GenerateResource.cache
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.csproj.CoreCompileInputs.cache
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.exe
+D:\dev\C#Work\Interface_Test\Interface_Test\obj\Debug\Interface_Test.pdb

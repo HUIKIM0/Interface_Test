@@ -29,13 +29,106 @@ namespace Interface_Test
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.파일FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.편집EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.선택SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.선택Form색상변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.파일FToolStripMenuItem,
+            this.편집EToolStripMenuItem,
+            this.선택SToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 파일FToolStripMenuItem
+            // 
+            this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.파일FToolStripMenuItem.Text = "파일(F)";
+            // 
+            // 편집EToolStripMenuItem
+            // 
+            this.편집EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainForm생성ToolStripMenuItem,
+            this.subForm생성ToolStripMenuItem});
+            this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.편집EToolStripMenuItem.Text = "편집(E)";
+            // 
+            // 선택SToolStripMenuItem
+            // 
+            this.선택SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.선택Form색상변경ToolStripMenuItem});
+            this.선택SToolStripMenuItem.Name = "선택SToolStripMenuItem";
+            this.선택SToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.선택SToolStripMenuItem.Text = "선택(S)";
+            // 
+            // mainForm생성ToolStripMenuItem
+            // 
+            this.mainForm생성ToolStripMenuItem.Name = "mainForm생성ToolStripMenuItem";
+            this.mainForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mainForm생성ToolStripMenuItem.Text = "Main Form 생성";
+            // 
+            // subForm생성ToolStripMenuItem
+            // 
+            this.subForm생성ToolStripMenuItem.Name = "subForm생성ToolStripMenuItem";
+            this.subForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.subForm생성ToolStripMenuItem.Text = "Sub Form 생성";
+            // 
+            // 선택Form색상변경ToolStripMenuItem
+            // 
+            this.선택Form색상변경ToolStripMenuItem.Name = "선택Form색상변경ToolStripMenuItem";
+            this.선택Form색상변경ToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.선택Form색상변경ToolStripMenuItem.Text = "선택 Form 색상 변경";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 파일FToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 편집EToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mainForm생성ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subForm생성ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 선택SToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 선택Form색상변경ToolStripMenuItem;
     }
 }
 

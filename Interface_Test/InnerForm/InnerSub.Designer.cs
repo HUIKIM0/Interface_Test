@@ -1,5 +1,5 @@
 ﻿
-namespace Interface_Test.InnerForm
+namespace Interface_Test
 {
     partial class InnerSub
     {
