@@ -52,9 +52,27 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InnerForm\InnerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InnerForm\InnerMain.Designer.cs">
+      <DependentUpon>InnerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InnerForm\InnerSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InnerForm\InnerSub.Designer.cs">
+      <DependentUpon>InnerSub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\iCommon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InnerForm\InnerMain.resx">
+      <DependentUpon>InnerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InnerForm\InnerSub.resx">
+      <DependentUpon>InnerSub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,8 +95,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
