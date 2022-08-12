@@ -45,9 +45,9 @@ namespace Interface_Test
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInnerMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblInnerMain.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblInnerMain.Location = new System.Drawing.Point(72, 95);
+            this.lblInnerMain.Location = new System.Drawing.Point(24, 98);
             this.lblInnerMain.Name = "lblInnerMain";
-            this.lblInnerMain.Size = new System.Drawing.Size(406, 172);
+            this.lblInnerMain.Size = new System.Drawing.Size(391, 165);
             this.lblInnerMain.TabIndex = 0;
             this.lblInnerMain.Text = "dd";
             this.lblInnerMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,9 +58,9 @@ namespace Interface_Test
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsProgressBar,
             this.tsCountlbl});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 295);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 288);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(550, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(438, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -77,18 +77,19 @@ namespace Interface_Test
             // 
             // btnInterfaceCallBack
             // 
-            this.btnInterfaceCallBack.Location = new System.Drawing.Point(75, 29);
+            this.btnInterfaceCallBack.Location = new System.Drawing.Point(27, 29);
             this.btnInterfaceCallBack.Name = "btnInterfaceCallBack";
             this.btnInterfaceCallBack.Size = new System.Drawing.Size(192, 51);
             this.btnInterfaceCallBack.TabIndex = 2;
             this.btnInterfaceCallBack.Text = "Interface CallBack Start";
             this.btnInterfaceCallBack.UseVisualStyleBackColor = true;
+            this.btnInterfaceCallBack.Click += new System.EventHandler(this.btnInterfaceCallBack_Click);
             // 
             // btnStateLoopCheck
             // 
-            this.btnStateLoopCheck.Location = new System.Drawing.Point(286, 29);
+            this.btnStateLoopCheck.Location = new System.Drawing.Point(232, 29);
             this.btnStateLoopCheck.Name = "btnStateLoopCheck";
-            this.btnStateLoopCheck.Size = new System.Drawing.Size(192, 51);
+            this.btnStateLoopCheck.Size = new System.Drawing.Size(183, 51);
             this.btnStateLoopCheck.TabIndex = 3;
             this.btnStateLoopCheck.Text = "Status Loop Check Start";
             this.btnStateLoopCheck.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@ namespace Interface_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 321);
+            this.ClientSize = new System.Drawing.Size(438, 314);
             this.Controls.Add(this.btnStateLoopCheck);
             this.Controls.Add(this.btnInterfaceCallBack);
             this.Controls.Add(this.statusStrip1);

@@ -7,23 +7,24 @@ using System.Threading.Tasks;
 
 namespace Interface_Test
 {
-    class cCallBack
+    class cClassCallBack
     {
         #region Thread로 상태 체크
         Thread _thread;
         public int _iProgressLog = 0;
 
-        // 외부에서 fTCallProgress를 호출하기 위한
+        // 외부에서 fTCallProgress(Thread)를 호출하기 위한
         public void fStart()
         {
-            fTCallProgress();
+            fThCallProgress();
         }
         
-        void fTCallProgress()
+        void fThCallProgress()
         {
             _thread = new Thread(Run);
             _thread.Start();
         }
+
 
         private void Run()
         {

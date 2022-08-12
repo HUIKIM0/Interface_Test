@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Interface_Test
 {
-    public partial class InnerMain : Form, iCommon
+    public partial class InnerMain : Form, iCommon, iCallBack
     {
-
+        Thread _thread;
 
         public InnerMain()
         {
@@ -50,18 +50,20 @@ namespace Interface_Test
         #endregion
 
 
-        cCallBack _fClassMain;
-        Thread _thread;
+        #region Class CallBack
 
+        cClassCallBack _ClassCallBack;
+
+        // Loop Check
         private void btnStateLoopCheck_Click(object sender, EventArgs e)
         {
-            _fClassMain = new cCallBack();
-            _fClassMain.fStart();   // 비동기로 요청(내부에서 Thread 별도 동작)
+            _ClassCallBack = new cClassCallBack();
+            _ClassCallBack.fStart();   // 비동기로 요청(내부에서 Thread 별도 동작)
 
             // 상태를 체크 할 로직 (별도 Thread)
+            fTProgressCheck();
 
         }
-
 
         void fTProgressCheck()
         {
@@ -74,7 +76,54 @@ namespace Interface_Test
         /// </summary>
         private void pCheck()
         {
+            int iCheck = 0;
 
+            while (_ClassCallBack._iProgressLog <=100)
+            {
+                Invoke(new Action(delegate ()
+                {
+                    iCheck = _ClassCallBack._iProgressLog;
+                    tsCountlbl.Text = $"{iCheck}%";
+                    tsProgressBar.Value = iCheck;
+
+                    btnStateLoopCheck.Text = (iCheck < 100) ? "Playing" : "Status Loop Check Start";
+
+
+                }));
+                Thread.Sleep(300);
+            }
+
+            _thread.Join();
         }
+        #endregion
+
+        #region Interface CallBack
+
+        cInterCallBack _InterCallBack;
+        private void btnInterfaceCallBack_Click(object sender, EventArgs e)
+        {
+            _InterCallBack = new cInterCallBack(this);
+            _InterCallBack.fStart();
+        }
+
+        // Interface Funcion구현. cInterCallBack의 Thread에 의해 주기적 호출
+        public string fCallBackMessage(string strMsg)
+        {
+            int iMsg = int.Parse(strMsg);
+
+            Invoke(new Action(delegate ()
+            {
+
+                //interface로 CallBack응답 받음
+
+                tsCountlbl.Text = $"{iMsg}";
+                tsProgressBar.Value = iMsg;
+
+                btnInterfaceCallBack.Text = (iMsg < 100) ? "Playing" : "Interface CallBack Start";
+            }));
+
+            return iMsg.ToString();
+        }
+        #endregion
     }
 }

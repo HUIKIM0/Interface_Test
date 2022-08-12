@@ -31,7 +31,7 @@ namespace Interface_Test
         {
             this.lblInnerSub = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsProgress = new System.Windows.Forms.ToolStripProgressBar();
+            this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.tsCountlbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDelCallBack = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
@@ -41,7 +41,7 @@ namespace Interface_Test
             // 
             this.lblInnerSub.BackColor = System.Drawing.SystemColors.Info;
             this.lblInnerSub.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblInnerSub.Location = new System.Drawing.Point(45, 103);
+            this.lblInnerSub.Location = new System.Drawing.Point(27, 100);
             this.lblInnerSub.Name = "lblInnerSub";
             this.lblInnerSub.Size = new System.Drawing.Size(281, 94);
             this.lblInnerSub.TabIndex = 0;
@@ -52,18 +52,18 @@ namespace Interface_Test
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsProgress,
+            this.tsProgressBar,
             this.tsCountlbl});
             this.statusStrip1.Location = new System.Drawing.Point(0, 222);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(372, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(336, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tsProgress
+            // tsProgressBar
             // 
-            this.tsProgress.Name = "tsProgress";
-            this.tsProgress.Size = new System.Drawing.Size(100, 18);
+            this.tsProgressBar.Name = "tsProgressBar";
+            this.tsProgressBar.Size = new System.Drawing.Size(100, 18);
             // 
             // tsCountlbl
             // 
@@ -73,18 +73,19 @@ namespace Interface_Test
             // 
             // btnDelCallBack
             // 
-            this.btnDelCallBack.Location = new System.Drawing.Point(48, 33);
+            this.btnDelCallBack.Location = new System.Drawing.Point(30, 28);
             this.btnDelCallBack.Name = "btnDelCallBack";
             this.btnDelCallBack.Size = new System.Drawing.Size(278, 50);
             this.btnDelCallBack.TabIndex = 2;
             this.btnDelCallBack.Text = "Delegate CallBack Start";
             this.btnDelCallBack.UseVisualStyleBackColor = true;
+            this.btnDelCallBack.Click += new System.EventHandler(this.btnDelCallBack_Click);
             // 
             // InnerSub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 248);
+            this.ClientSize = new System.Drawing.Size(336, 248);
             this.Controls.Add(this.btnDelCallBack);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblInnerSub);
@@ -102,7 +103,7 @@ namespace Interface_Test
 
         private System.Windows.Forms.Label lblInnerSub;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar tsProgress;
+        private System.Windows.Forms.ToolStripProgressBar tsProgressBar;
         private System.Windows.Forms.ToolStripStatusLabel tsCountlbl;
         private System.Windows.Forms.Button btnDelCallBack;
     }

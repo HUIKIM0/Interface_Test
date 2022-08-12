@@ -38,6 +38,7 @@ namespace Interface_Test
             this.선택SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.선택Form색상변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pMain = new System.Windows.Forms.Panel();
+            this.초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace Interface_Test
             this.선택SToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,7 +60,7 @@ namespace Interface_Test
             this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.파일FToolStripMenuItem.Text = "파일(F)";
             // 
             // exitToolStripMenuItem
@@ -73,9 +74,10 @@ namespace Interface_Test
             // 
             this.편집EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainForm생성ToolStripMenuItem,
-            this.subForm생성ToolStripMenuItem});
+            this.subForm생성ToolStripMenuItem,
+            this.초기화ToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.편집EToolStripMenuItem.Text = "편집(E)";
             // 
             // mainForm생성ToolStripMenuItem
@@ -97,7 +99,7 @@ namespace Interface_Test
             this.선택SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.선택Form색상변경ToolStripMenuItem});
             this.선택SToolStripMenuItem.Name = "선택SToolStripMenuItem";
-            this.선택SToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.선택SToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.선택SToolStripMenuItem.Text = "선택(S)";
             // 
             // 선택Form색상변경ToolStripMenuItem
@@ -110,10 +112,17 @@ namespace Interface_Test
             // 
             this.pMain.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMain.Location = new System.Drawing.Point(0, 30);
+            this.pMain.Location = new System.Drawing.Point(0, 28);
             this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(800, 420);
+            this.pMain.Size = new System.Drawing.Size(800, 422);
             this.pMain.TabIndex = 1;
+            // 
+            // 초기화ToolStripMenuItem
+            // 
+            this.초기화ToolStripMenuItem.Name = "초기화ToolStripMenuItem";
+            this.초기화ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.초기화ToolStripMenuItem.Text = "초기화";
+            this.초기화ToolStripMenuItem.Click += new System.EventHandler(this.초기화ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -143,6 +152,7 @@ namespace Interface_Test
         private System.Windows.Forms.ToolStripMenuItem 선택SToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 선택Form색상변경ToolStripMenuItem;
         private System.Windows.Forms.Panel pMain;
+        private System.Windows.Forms.ToolStripMenuItem 초기화ToolStripMenuItem;
     }
 }
 
