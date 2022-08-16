@@ -43,6 +43,5 @@ namespace Interface_Test
                 Thread.Sleep(500);
             }
         }
-
     }
 }

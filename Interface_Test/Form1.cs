@@ -84,5 +84,32 @@ namespace Interface_Test
                 oitem.Close();
             }
         }
+
+        private void 선택Form색상변경ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog cColor = new ColorDialog();
+
+            if(cColor.ShowDialog() == DialogResult.OK)
+            {
+                foreach (Form oform in pMain.Controls)  
+                {
+                    //if(oform is InnerMain)  
+                    //{
+                    //    InnerMain main = oform as InnerMain; // 이거 해줘야 Lable 색 바꾸는 function 접근가능
+                    //    // main.BackColor = cColor.Color; X
+                    //    main.fColorChange(cColor.Color);
+                    //}
+                    //else if(oform is InnerSub)  
+                    //{
+                    //    InnerSub sub = oform as InnerSub;
+                    //    sub.fColorChange(cColor.Color);
+                    
+
+                // interface 느슨한 결합. interface의 function에 다 접근
+                iCommon icom = oform as iCommon;
+                icom.fColorChange(cColor.Color);
+                }
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Interface_Test
 
         public void fColorChange(Color color)
         {
-            lblInnerSub.BackColor = color;
+            lblInnerSub.ForeColor = color;
         }
 
         public void fInit()

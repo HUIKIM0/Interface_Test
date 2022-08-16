@@ -35,10 +35,10 @@ namespace Interface_Test
             this.편집EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subForm생성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.선택SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.선택Form색상변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pMain = new System.Windows.Forms.Panel();
-            this.초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,16 +83,23 @@ namespace Interface_Test
             // mainForm생성ToolStripMenuItem
             // 
             this.mainForm생성ToolStripMenuItem.Name = "mainForm생성ToolStripMenuItem";
-            this.mainForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mainForm생성ToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.mainForm생성ToolStripMenuItem.Text = "Main Form 생성";
             this.mainForm생성ToolStripMenuItem.Click += new System.EventHandler(this.mainForm생성ToolStripMenuItem_Click);
             // 
             // subForm생성ToolStripMenuItem
             // 
             this.subForm생성ToolStripMenuItem.Name = "subForm생성ToolStripMenuItem";
-            this.subForm생성ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.subForm생성ToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.subForm생성ToolStripMenuItem.Text = "Sub Form 생성";
             this.subForm생성ToolStripMenuItem.Click += new System.EventHandler(this.subForm생성ToolStripMenuItem_Click);
+            // 
+            // 초기화ToolStripMenuItem
+            // 
+            this.초기화ToolStripMenuItem.Name = "초기화ToolStripMenuItem";
+            this.초기화ToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.초기화ToolStripMenuItem.Text = "초기화";
+            this.초기화ToolStripMenuItem.Click += new System.EventHandler(this.초기화ToolStripMenuItem_Click);
             // 
             // 선택SToolStripMenuItem
             // 
@@ -107,6 +114,7 @@ namespace Interface_Test
             this.선택Form색상변경ToolStripMenuItem.Name = "선택Form색상변경ToolStripMenuItem";
             this.선택Form색상변경ToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.선택Form색상변경ToolStripMenuItem.Text = "선택 Form 색상 변경";
+            this.선택Form색상변경ToolStripMenuItem.Click += new System.EventHandler(this.선택Form색상변경ToolStripMenuItem_Click);
             // 
             // pMain
             // 
@@ -116,13 +124,6 @@ namespace Interface_Test
             this.pMain.Name = "pMain";
             this.pMain.Size = new System.Drawing.Size(800, 422);
             this.pMain.TabIndex = 1;
-            // 
-            // 초기화ToolStripMenuItem
-            // 
-            this.초기화ToolStripMenuItem.Name = "초기화ToolStripMenuItem";
-            this.초기화ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.초기화ToolStripMenuItem.Text = "초기화";
-            this.초기화ToolStripMenuItem.Click += new System.EventHandler(this.초기화ToolStripMenuItem_Click);
             // 
             // Form1
             // 
